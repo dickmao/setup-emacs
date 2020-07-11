@@ -39,7 +39,7 @@ async function run() {
       "-iA",
       emacsCIVersion,
       "-f",
-      "https://github.com/purcell/nix-emacs-ci/archive/master.tar.gz"
+      "https://github.com/dickmao/nix-emacs-ci/archive/master.tar.gz"
     ]);
     core.info("Running 'emacs -version'");
     await exec.exec("emacs", ["-version"]);
