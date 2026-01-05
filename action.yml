@@ -7,6 +7,9 @@ inputs:
   repository:
     description: 'The GitHub repository containing nix-emacs-ci builds'
     default: 'purcell/nix-emacs-ci'
+  branch:
+    description: 'The branch/ref to use from the repository'
+    default: ''
 runs:
   using: 'composite'
   steps:
@@ -15,4 +18,5 @@ runs:
       env:
         INPUT_VERSION: ${{ inputs.version }}
         INPUT_REPOSITORY: ${{ inputs.repository }}
+        INPUT_BRANCH: ${{ inputs.branch }}
         GITHUB_TOKEN: ${{ github.token }}

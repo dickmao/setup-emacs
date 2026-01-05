@@ -38,6 +38,16 @@ with:
   repository: your-username/nix-emacs-ci
 ```
 
+You can also specify a branch/ref:
+
+```yaml
+uses: purcell/setup-emacs@master
+with:
+  version: 29.1
+  repository: your-username/nix-emacs-ci
+  branch: your-branch-name
+```
+
 For an example of real-life usage, see the [Actions config for `package-lint`](https://github.com/purcell/package-lint/blob/master/.github/workflows/test.yml).
 
 <hr>
