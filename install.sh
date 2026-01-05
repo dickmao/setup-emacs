@@ -17,5 +17,5 @@ if ! type -p nix &>/dev/null ; then
 fi
 
 echo "::group::Configuring build cache and installing Emacs"
-nix profile install --accept-flake-config "github:purcell/nix-emacs-ci#emacs-${INPUT_VERSION/./-}"
+nix profile install --accept-flake-config "github:${INPUT_REPOSITORY:-purcell/nix-emacs-ci}#emacs-${INPUT_VERSION/./-}"
 echo "::endgroup::"

@@ -4,6 +4,9 @@ author: 'Steve Purcell'
 inputs:
   version:
     description: 'The version of Emacs to install, e.g. "24.3", or "snapshot" for a recent development version.'
+  repository:
+    description: 'The GitHub repository containing nix-emacs-ci builds'
+    default: 'purcell/nix-emacs-ci'
 runs:
   using: 'composite'
   steps:
@@ -11,4 +14,5 @@ runs:
       shell: bash
       env:
         INPUT_VERSION: ${{ inputs.version }}
+        INPUT_REPOSITORY: ${{ inputs.repository }}
         GITHUB_TOKEN: ${{ github.token }}
