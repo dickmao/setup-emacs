@@ -21,11 +21,22 @@ See the [actions tab](https://github.com/purcell/setup-emacs/actions) for runs o
 uses: purcell/setup-emacs@master
 with:
   version: 24.5
-  ```
+```
 
 The `emacs` executable on the path will then be the requested
 version. For a list of available versions, please see the
 [nix-emacs-ci](https://github.com/purcell/nix-emacs-ci) project.
+
+### Using a custom repository
+
+By default, this action uses [purcell/nix-emacs-ci](https://github.com/purcell/nix-emacs-ci) for Emacs builds. You can specify an alternative repository:
+
+```yaml
+uses: purcell/setup-emacs@master
+with:
+  version: 29.1
+  repository: your-username/nix-emacs-ci
+```
 
 For an example of real-life usage, see the [Actions config for `package-lint`](https://github.com/purcell/package-lint/blob/master/.github/workflows/test.yml).
 
