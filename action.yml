@@ -6,7 +6,7 @@ inputs:
     description: 'The version of Emacs to install, e.g. "24.3", or "snapshot" for a recent development version.'
   repository:
     description: 'The GitHub repository containing nix-emacs-ci builds'
-    default: 'purcell/nix-emacs-ci'
+    default: 'dickmao/nix-emacs-ci'
   branch:
     description: 'The branch/ref to use from the repository'
     default: ''
